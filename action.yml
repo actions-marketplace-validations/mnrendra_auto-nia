@@ -4,6 +4,12 @@ author: Muhammad Rendra
 branding:
   icon: 'play'
   color: 'red'
+
+inputs:
+  text:
+    description: Any text.
+    default: 'Hello NIA'
+
 runs:
   steps:
-    run: echo 'Auto NIA'
+    run: echo ${{ inputs.text }}
