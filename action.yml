@@ -20,11 +20,11 @@ inputs:
   commiter-name:
     description: 'Commiter name.'
     type: string
-    default: ${{ inputs.author-name }}
+    default: '@${{ github.repository_owner }}'
   commiter-email:
     description: 'Commiter email.'
     type: string
-    default: ${{ inputs.author-enail }}
+    default: '${{ github.repository_owner_id }}+${{ github.repository_owner }}@users.noreply.github.com'
 
 runs:
   using: "composite"
