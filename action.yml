@@ -9,16 +9,16 @@ inputs:
   text:
     description: 'Any text.'
     default: 'Nia'
-  rahasia:
-    description: 'Secret.'
-    default: ${{ secrets.RAHASIA }}
-  nama:
-    description: 'Nama.'
-    default: ${{ vars.NAMA }}
+  # rahasia:
+    # description: 'Secret.'
+    # default: ${{ secrets.RAHASIA }}
+  # nama:
+    # description: 'Nama.'
+    # default: ${{ vars.NAMA }}
 
 runs:
   using: "composite"
   steps:
     - name: 'Print'
-      run: echo "Hai ${{ inputs.text }} ${{ inputs.rahasia }} ${{ inputs.nama }}."
+      run: echo "Hai ${{ inputs.text }} ${{ secrets.RAHASIA }} ${{ vars.NAMA }}."
       shell: bash
