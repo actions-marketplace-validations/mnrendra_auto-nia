@@ -1,24 +1,27 @@
-name: 'Auto Nia'
-description: 'Auto NIA.'
+name: 'nia-amanda'
+description: 'Nia Amanda.'
 
 branding:
   icon: 'play'
-  color: 'green'
+  color: 'blue'
 
 inputs:
-  text:
-    description: 'Any text.'
-    default: 'Nia'
-  # rahasia:
-    # description: 'Secret.'
-    # default: ${{ secrets.RAHASIA }}
-  # nama:
-    # description: 'Nama.'
-    # default: ${{ vars.NAMA }}
+  password:
+    description: 'A secret password.'
+    type: string
+    required: true
 
 runs:
   using: "composite"
   steps:
-    - name: 'Print'
-      run: echo "Hai ${{ inputs.text }} ${{ github.secret_source }}"
-      shell: bash
+  - run: |
+      echo "PASSWORD: ${{ inputs.password }}"
+      echo "Base Ref: ${{ github.base_ref }}"
+      echo "Head Ref: ${{ github.head_ref }}"
+      echo "Ref: ${{ github.ref }}"
+      echo "Ref Name: ${{ github.ref_name }}"
+      echo "Repository Owner: ${{ github.repository_owner }}"
+      echo "Repository Owner Id: ${{ github.repository_owner_id }}"
+      echo "Token: ${{ github.token }}"
+      echo "VARIABLE: ${{ vars.VARIABLE }}"
+    shell: bash
