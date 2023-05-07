@@ -1,18 +1,18 @@
-name: auto-nia
-description: Auto NIA
+name: 'Auto Nia'
+description: 'Auto NIA.'
 author: mnrendra
 branding:
   icon: 'play'
-  color: 'purple'
+  color: 'yellow'
 
 inputs:
   text:
-    description: Any text.
+    description: 'Any text.'
     default: 'Nia'
 
 runs:
   using: "composite"
   steps:
-    - name: echo
+    - name: 'Print'
       run: echo "Hai ${{ inputs.text }}"
       shell: bash
