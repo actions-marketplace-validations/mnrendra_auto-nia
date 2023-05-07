@@ -12,4 +12,5 @@ inputs:
 
 runs:
   steps:
-    run: echo ${{ inputs.text }}
+    - name: echo
+      run: echo ${{ inputs.text }}
