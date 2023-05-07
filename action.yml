@@ -1,0 +1,9 @@
+name: auto-nia
+description: Auto NIA
+author: Muhammad Rendra
+branding:
+  icon: 'play'
+  color: 'red'
+runs:
+  steps:
+    run: echo 'Auto NIA'
