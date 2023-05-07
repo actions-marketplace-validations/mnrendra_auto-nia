@@ -9,7 +9,22 @@ inputs:
   password:
     description: 'A secret password.'
     type: string
-    required: true
+  author-name:
+    description: 'Author name.'
+    type: string
+    default: '@${{ github.repository_owner }}'
+  author-email:
+    description: 'Author email.'
+    type: string
+    default: '${{ github.repository_owner_id }}+${{ github.repository_owner }}@users.noreply.github.com'
+  commiter-name:
+    description: 'Commiter name.'
+    type: string
+    default: ${{ inputs.author-name }}
+  commiter-email:
+    description: 'Commiter email.'
+    type: string
+    default: ${{ inputs.author-enail }}
 
 runs:
   using: "composite"
@@ -23,4 +38,9 @@ runs:
       echo "Repository Owner: ${{ github.repository_owner }}"
       echo "Repository Owner Id: ${{ github.repository_owner_id }}"
       echo "Token: ${{ github.token }}"
+      echo "======================================================"
+      echo "Author Name: ${{ inputs.author-name }}"
+      echo "Author Email: ${{ inputs.author-email }}"
+      echo "Commiter Name: ${{ inputs.commiter-name }}"
+      echo "Commiter Email: ${{ inputs.commiter-email }}"
     shell: bash
