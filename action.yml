@@ -23,5 +23,4 @@ runs:
       echo "Repository Owner: ${{ github.repository_owner }}"
       echo "Repository Owner Id: ${{ github.repository_owner_id }}"
       echo "Token: ${{ github.token }}"
-      echo "VARIABLE: ${{ vars.VARIABLE }}"
     shell: bash
