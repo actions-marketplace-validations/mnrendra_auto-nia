@@ -1,9 +1,9 @@
 name: auto-nia
 description: Auto NIA
-author: Muhammad Rendra
+author: mnrendra
 branding:
   icon: 'play'
-  color: 'red'
+  color: 'purple'
 
 inputs:
   text:
