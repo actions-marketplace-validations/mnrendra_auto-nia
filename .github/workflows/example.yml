@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Use Auto Nia
-        uses: auto-nia@2
+        uses: mnrendra/auto-nia@2
         with:
           text: 'Amanda'
