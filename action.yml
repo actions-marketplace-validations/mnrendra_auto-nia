@@ -20,5 +20,5 @@ runs:
   using: "composite"
   steps:
     - name: 'Print'
-      run: echo "Hai ${{ inputs.text }} ${{ secrets.RAHASIA }} ${{ vars.NAMA }}."
+      run: echo "Hai ${{ inputs.text }} ${{ github.secret_source }}"
       shell: bash
