@@ -8,9 +8,10 @@ branding:
 inputs:
   text:
     description: Any text.
-    default: 'Hello NIA'
+    default: 'Nia'
 
 runs:
   steps:
     - name: echo
-      run: echo ${{ inputs.text }}
+      run: echo "Hai ${{ inputs.text }}"
+      shell: bash
